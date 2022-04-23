@@ -13,3 +13,19 @@ function compute()
         "in the year " + currentYear + ".";
 }
         
+function updateRate()
+{
+    rate = document.getElementById("rate").value;
+    rateDisplay = document.getElementById("rate_display");
+    rateDisplay.innerHTML = rate + "%";
+}
+
+function validatePrincipal() 
+{
+    principal = document.getElementById("principal").value;
+    if (parseInt(principal) <= 0) 
+    {
+        alert("Please enter a positive number");
+        document.getElementById("principal").focus();
+    }
+}
