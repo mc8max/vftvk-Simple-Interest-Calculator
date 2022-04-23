@@ -6,28 +6,43 @@
     <body>
 
         <div class="maindiv">
+        
             <h1>Simple Interest Calculator</h1>
+            
+            <div id="inner2">
+                <div  tabindex="0">
+                    <label for="amount">Amount</label>
+                    <input type="number" type="text" id="principal" value="1000000" onchange="validatePrincipal()">
+                </div>
+                
+                <div>
+                    <label>Rate</label>
+                    <input type="range" id="rate" min="0" max="100" step="0.25" value="3.5" onchange="updateRate()"> 
+                    <span id="rate_display">3.5%</span>
+                </div>
 
-            Amount <input type="number" type="text" id="principal" value="1000000" onchange="validatePrincipal()">  <br/>
-            Rate <input type="range" id="rate" min="0" max="100" step="0.25" value="3.5" onchange="updateRate()"> <span id="rate_display">3.5%</span> <br/>
-            No. of Years 
-            <select name="years" id="years">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-            </select> <br/>
-            <button onclick="compute()">Compute</button> <br/>
-            <span id="result"></span>
-            <br/>
-            <br/>
-            <footer>&#169; Everyone Can Get Rich</footer>
+                <div>
+                    <label>No. of Years </label>
+                    <select name="years" id="years">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                
+                <button onclick="compute()">Compute</button> <br/>
+                <span id="result"></span>
+                <br/>
+            </div>
+
+            <div><footer>&#169; Everyone Can Get Rich</footer></div>
         </div>
     </body>
 </html>
