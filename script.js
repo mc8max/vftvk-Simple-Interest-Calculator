@@ -7,10 +7,10 @@ function compute()
     currentYear = new Date().getFullYear() + parseInt(years);
     
     i = document.getElementById("result");
-    i.innerHTML = "If you deposit " + principal + ", <br />" +
-        "at an interest rate of " + rate + "%.<br />" +
-        "You will receive an amount of " + interest + ",<br />" +
-        "in the year " + currentYear + ".";
+    i.innerHTML = "If you deposit <span>" + principal + "</span>, <br />" +
+        "at an interest rate of <span>" + rate + "%</span>.<br />" +
+        "You will receive an amount of <span>" + interest + "</span>,<br />" +
+        "in the year <span>" + currentYear + "</span>.";
 }
         
 function updateRate()
